@@ -86,6 +86,7 @@
     <Compile Include="Models\EntityLayer\Nota.cs" />
     <Compile Include="Models\EntityLayer\Profesor.cs" />
     <Compile Include="Models\EntityLayer\Utilizator.cs" />
+    <Compile Include="ViewModels\Commands\RelayCommand.cs" />
     <Compile Include="Views\AdminWindow.xaml.cs">
       <DependentUpon>AdminWindow.xaml</DependentUpon>
     </Compile>
