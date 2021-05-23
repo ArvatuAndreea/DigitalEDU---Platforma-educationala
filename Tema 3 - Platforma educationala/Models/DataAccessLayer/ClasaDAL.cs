@@ -16,14 +16,15 @@ namespace Platforma_educationala___DigitalEDU.Models
 
         public ObservableCollection<Clasa> GetAllClasses()
         {
-            using (SqlConnection con = DALHelper.Connection)
+            SqlConnection con = DALHelper.Connection;
+         try
             {
                 ObservableCollection<Clasa> result = new ObservableCollection<Clasa>();
                 SqlCommand cmd = new SqlCommand("GetAllClasses", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
-                while(reader.Read())
+                while (reader.Read())
                 {
                     Clasa c = new Clasa();
                     c.Cod_clasa = reader.GetString(0);
@@ -33,6 +34,10 @@ namespace Platforma_educationala___DigitalEDU.Models
                 }
                 reader.Close();
                 return result;
+            }
+            finally
+            {
+                con.Close();
             }
         }
 

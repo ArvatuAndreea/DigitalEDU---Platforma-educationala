@@ -59,7 +59,12 @@
     <Compile Include="Models\DataAccessLayer\AdministratorDAL.cs" />
     <Compile Include="Models\DataAccessLayer\ClasaDAL.cs" />
     <Compile Include="Models\DataAccessLayer\DALHelper.cs" />
-    <Compile Include="Models\DataAccessLayer\Elev.cs" />
+    <Compile Include="Models\DataAccessLayer\ElevDAL.cs" />
+    <Compile Include="Models\DataAccessLayer\Material_DidacticDAL.cs" />
+    <Compile Include="Models\DataAccessLayer\MaterieDAL.cs" />
+    <Compile Include="Models\DataAccessLayer\Materie_ClasaDAL.cs" />
+    <Compile Include="Models\DataAccessLayer\NotaDAL.cs" />
+    <Compile Include="Models\DataAccessLayer\ProfesorDAL.cs" />
     <Compile Include="Models\DataAccessLayer\UtilizatorDAL.cs" />
     <Compile Include="Models\EntityLayer\Administrator.cs" />
     <Compile Include="Models\EntityLayer\BasePropertyChanged.cs" />
