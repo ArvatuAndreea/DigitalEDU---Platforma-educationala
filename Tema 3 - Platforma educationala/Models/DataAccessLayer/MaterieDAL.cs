@@ -82,7 +82,7 @@ namespace Tema_3___Platforma_educationala.Models
             
         }
 
-        public ObservableCollection<Materie> GetAllSubjectsWithNoGrade()
+        public ObservableCollection<Materie> GetAllSubjectsWithNoGrades()
         {
             using (SqlConnection con = DALHelper.Connection)
             {

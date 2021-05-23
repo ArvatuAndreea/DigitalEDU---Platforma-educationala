@@ -44,6 +44,35 @@ namespace Platforma_educationala___DigitalEDU.Models
             }
         }
 
+        public ObservableCollection<Profesor> GetAllProfessors()
+        {
+            SqlConnection con = DALHelper.Connection;
+            try
+            {
+                SqlCommand cmd = new SqlCommand("GetAllProfessors", con);
+                ObservableCollection<Profesor> result = new ObservableCollection<Profesor>();
+                cmd.CommandType = CommandType.StoredProcedure;
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Profesor p = new Profesor();
+                    p.Id_prof = (int)(reader[0]);
+                    p.Nume = reader.GetString(1);
+                    p.Telefon = reader.GetString(2);
+                    p.Email = reader.GetString(3);
+                    p.Id_utilizator = (int)(reader[4]);
+                    result.Add(p);
+                }
+                reader.Close();
+                return result;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
         public ObservableCollection<Profesor> GetAllProfessorsWithNoSubjectClass()
         {
             using (SqlConnection con = DALHelper.Connection)

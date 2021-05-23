@@ -14,9 +14,37 @@ namespace Tema_3___Platforma_educationala.Models.BusinessLogicLayer
 
         Materie_ClasaDAL subjectsClassDAL = new Materie_ClasaDAL();
 
-        public ObservableCollection<Materie_Clasa> GetAllSubjectsClass()
+        public void GetAllSubjectClassForSubject(Materie materie)
         {
-            return subjectsClassDAL.GetAllSubjectsClass();
+            SubjectsClassList.Clear();
+            Materie_ClasaDAL materieClasaDAL = new Materie_ClasaDAL();
+            var materiiClasa = materieClasaDAL.GetAllSubjectsClassForSubject(materie);
+            foreach (var m in materiiClasa)
+            {
+                SubjectsClassList.Add(m);
+            }
+        }
+
+        public void GetAllSubjectClassForProfessor(Profesor prof)
+        {
+            SubjectsClassList.Clear();
+            Materie_ClasaDAL materieClasaDAL = new Materie_ClasaDAL();
+            var materiiClasa = materieClasaDAL.GetAllSubjectsClassForProfessor(prof);
+            foreach (var m in materiiClasa)
+            {
+                SubjectsClassList.Add(m);
+            }
+        }
+
+        public void GetAllSubjectClassForClass(Clasa clasa)
+        {
+            SubjectsClassList.Clear();
+            Materie_ClasaDAL materieClasaDAL = new Materie_ClasaDAL();
+            var materiiClasa = materieClasaDAL.GetAllSubjectClassForClass(clasa);
+            foreach(var m in materiiClasa)
+            {
+                SubjectsClassList.Add(m);
+            }
         }
 
         public void AddSubjectClass(Materie_Clasa materieClasa)

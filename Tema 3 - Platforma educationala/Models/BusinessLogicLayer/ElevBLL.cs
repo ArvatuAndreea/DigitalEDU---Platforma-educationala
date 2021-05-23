@@ -14,10 +14,38 @@ namespace Tema_3___Platforma_educationala.Models.BusinessLogicLayer
         public string ErrorMessage { get; set; }
 
         ElevDAL elevDAL = new ElevDAL();
+        public void GetAllStudentsForUser(Utilizator user)
+        {
+            StudentsList.Clear();
+            ElevDAL elevDAL = new ElevDAL();
+            var elevi = elevDAL.GetAllStudentsForUser(user);
+            foreach (var e in elevi)
+            {
+                StudentsList.Add(e);
+            }
+        }
+
+        public void GetAllStudentsForClass(Clasa clasa)
+        {
+            StudentsList.Clear();
+            ElevDAL elevDAL = new ElevDAL();
+            var elevi = elevDAL.GetAllStudentsForClass(clasa);
+            foreach (var e in elevi)
+            {
+                StudentsList.Add(e);
+            }
+        }
+
         public ObservableCollection<Elev> GetAllStudents()
         {
             return elevDAL.GetAllStudents();
         }
+
+        public ObservableCollection<Elev> GetAllStudentsWithoutGrades()
+        {
+            return elevDAL.GetAllStudentWithNoGrades();
+        }
+        
 
         public void AddElev(Elev elev)
         {

@@ -14,9 +14,26 @@ namespace Tema_3___Platforma_educationala.Models.BusinessLogicLayer
 
         NotaDAL notaDAL = new NotaDAL();
 
-        public ObservableCollection<Nota> GetAllGrades()
+        public void GetAllGradesForStudent(Elev elev)
         {
-            return notaDAL.GetAllGrades();
+            GradesList.Clear();
+            NotaDAL notaDAL = new NotaDAL();
+            var grades = notaDAL.GetAllGradesForStudent(elev);
+            foreach (var g in grades)
+            {
+                GradesList.Add(g);
+            }
+        }
+
+        public void GetAllGradesForSubject(Materie materie)
+        {
+            GradesList.Clear();
+            NotaDAL notaDAL = new NotaDAL();
+            var grades = notaDAL.GetAllGradesForSubject(materie);
+            foreach (var g in grades)
+            {
+                GradesList.Add(g);
+            }
         }
 
         public void AddGrade(Nota nota)

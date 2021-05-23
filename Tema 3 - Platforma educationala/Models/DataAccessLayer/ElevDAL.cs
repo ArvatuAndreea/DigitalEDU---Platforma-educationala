@@ -43,6 +43,34 @@ namespace Platforma_educationala___DigitalEDU.Models
             }
         }
 
+        public ObservableCollection<Elev> GetAllStudents()
+        {
+            SqlConnection con = DALHelper.Connection;
+            try
+            {
+                SqlCommand cmd = new SqlCommand("GetAllStudents", con);
+                ObservableCollection<Elev> result = new ObservableCollection<Elev>();
+                cmd.CommandType = CommandType.StoredProcedure;
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Elev e = new Elev();
+                    e.Id_elev = (int)(reader[0]);
+                    e.Nume = reader.GetString(1);
+                    e.Cod_clasa = reader.GetString(2);
+                    e.Id_utilizator = (int)(reader[3]);
+                    result.Add(e);
+                }
+                reader.Close();
+                return result;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
         public ObservableCollection<Elev> GetAllStudentsForUser(Utilizator user)
         {
             SqlConnection con = DALHelper.Connection;

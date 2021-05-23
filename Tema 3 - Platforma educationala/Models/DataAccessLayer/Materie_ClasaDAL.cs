@@ -75,13 +75,13 @@ namespace Tema_3___Platforma_educationala.Models
             }
         }
 
-        public ObservableCollection<Material_Didactic> GetAllSubjectClassForClass(Clasa clasa)
+        public ObservableCollection<Materie_Clasa> GetAllSubjectClassForClass(Clasa clasa)
         {
             SqlConnection con = DALHelper.Connection;
             try
             {
                 SqlCommand cmd = new SqlCommand("GetAllSubjectClassForClass", con);
-                ObservableCollection<Material_Didactic> result = new ObservableCollection<Material_Didactic>();
+                ObservableCollection<Materie_Clasa> result = new ObservableCollection<Materie_Clasa>();
                 cmd.CommandType = CommandType.StoredProcedure;
                 SqlParameter paramCodClasa = new SqlParameter("@cod_clasa", clasa.Cod_clasa);
                 cmd.Parameters.Add(paramCodClasa);
@@ -89,11 +89,12 @@ namespace Tema_3___Platforma_educationala.Models
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    Material_Didactic md = new Material_Didactic();
-                    md.Id_material = (int)(reader[0]);
+                    Materie_Clasa md = new Materie_Clasa();
+                    md.Cod = (int)(reader[0]);
                     md.Id_materie = (int)(reader[1]);
-                    md.Cod_clasa = reader.GetString(2);
-                    md.Titlu = reader.GetString(3);
+                    md.Id_prof = (int)(reader[2]);
+                    md.Cod_clasa = reader.GetString(3);
+                    md.Are_teza = reader.GetString(4);
                     result.Add(md);
                 }
                 reader.Close();

@@ -14,9 +14,26 @@ namespace Tema_3___Platforma_educationala.Models.BusinessLogicLayer
         public string ErrorMessage { get; set; }
 
         Material_DidacticDAL materialDAL = new Material_DidacticDAL();
-        public ObservableCollection<Material_Didactic> GetAllMaterials()
+        public void GetAllMaterialsForClass(Clasa clasa)
         {
-            return materialDAL.GetAllMaterials();
+            MaterialsList.Clear();
+            Material_DidacticDAL materialDAL = new Material_DidacticDAL();
+            var materials = materialDAL.GetAllMaterialsForClass(clasa);
+            foreach (var m in materials)
+            {
+                MaterialsList.Add(m);
+            }
+        }
+
+        public void GetAllMaterialsForSubject(Materie materie)
+        {
+            MaterialsList.Clear();
+            Material_DidacticDAL materialDAL = new Material_DidacticDAL();
+            var materials = materialDAL.GetAllMaterialsForSubject(materie);
+            foreach (var m in materials)
+            {
+                MaterialsList.Add(m);
+            }
         }
 
         public void AddMaterial(Material_Didactic material)

@@ -14,9 +14,15 @@ namespace Tema_3___Platforma_educationala.Models.BusinessLogicLayer
 
         AdministratorDAL administratorDAL = new AdministratorDAL();
 
-        public ObservableCollection<Administrator> GetAllAdministrators()
+        public void GetAllAdministratorsForUsers(Utilizator user)
         {
-            return administratorDAL.GetAllAdmins();
+            AdministratorsList.Clear();
+            AdministratorDAL adminDAL = new AdministratorDAL();
+            var admins = adminDAL.GetAllAdminsForUsers(user);
+            foreach (var a in admins)
+            {
+                AdministratorsList.Add(a);
+            }
         }
 
         public void AddAdministrator(Administrator administrator)

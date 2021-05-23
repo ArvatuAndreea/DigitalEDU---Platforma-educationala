@@ -14,11 +14,27 @@ namespace Tema_3___Platforma_educationala.Models.BusinessLogicLayer
 
         ProfesorDAL profDAL = new ProfesorDAL();
 
+        public void GetAllProfessorsForUsers(Utilizator user)
+        {
+            ProfessorsList.Clear();
+            ProfesorDAL profDAL = new ProfesorDAL();
+            var profs = profDAL.GetAllProfessorsForUsers(user);
+            foreach (var p in profs)
+            {
+                ProfessorsList.Add(p);
+            }
+        }
+
         public ObservableCollection<Profesor> GetAllProfessors()
         {
             return profDAL.GetAllProfessors();
         }
-        
+
+        public ObservableCollection<Profesor> GetAllProfessorsWithoutSubjectClass()
+        {
+            return profDAL.GetAllProfessorsWithNoSubjectClass();
+        }
+
         public void AddProfessor(Profesor prof)
         {
             if (String.IsNullOrEmpty(prof.Nume))

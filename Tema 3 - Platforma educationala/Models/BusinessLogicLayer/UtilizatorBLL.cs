@@ -18,6 +18,20 @@ namespace Tema_3___Platforma_educationala.Models.BusinessLogicLayer
         {
             return userDAL.GetAllUsers();
         }
+        public ObservableCollection<Utilizator> GetAllUsersWithoutAdmins()
+        {
+            return userDAL.GetAllUsersWithNoAdmins();
+        }
+
+        public ObservableCollection<Utilizator> GetAllUsersWithoutProfessors()
+        {
+            return userDAL.GetAllUsersWithNoProfessors();
+        }
+
+        public ObservableCollection<Utilizator> GetAllUsersWithoutStudents()
+        {
+            return userDAL.GetAllUsersWithNoStudents();
+        }
 
         public void AddUser(Utilizator user)
         {

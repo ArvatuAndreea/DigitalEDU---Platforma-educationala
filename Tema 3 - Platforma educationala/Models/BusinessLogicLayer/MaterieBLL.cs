@@ -19,6 +19,21 @@ namespace Tema_3___Platforma_educationala.Models.BusinessLogicLayer
             return materieDAL.GetAllSubjects();
         }
 
+        public ObservableCollection<Materie> GetAllSubjectsWithoutMaterial()
+        {
+            return materieDAL.GetAllSubjectsWithNoMaterial();
+        }
+
+        public ObservableCollection<Materie> GetAllSubjectsWithoutGrades()
+        {
+            return materieDAL.GetAllSubjectsWithNoGrades();
+        }
+
+        public ObservableCollection<Materie> GetAllSubjectsWithoutSubjectCLass()
+        {
+            return materieDAL.GetAllSubjectsWithNoSubjectClass();
+        }
+
         public void AddSubject(Materie materie)
         {
             if (String.IsNullOrEmpty(materie.Denumire))

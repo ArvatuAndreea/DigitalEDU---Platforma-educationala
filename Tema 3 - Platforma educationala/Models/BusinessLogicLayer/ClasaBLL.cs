@@ -20,6 +20,21 @@ namespace Tema_3___Platforma_educationala.Models.BusinessLogicLayer
             return clasaDAL.GetAllClasses();
         }
 
+        public ObservableCollection<Clasa> GetAllClassesWithoutStudents()
+        {
+            return clasaDAL.GetAllClassesWithNoStudents();
+        }
+
+        public ObservableCollection<Clasa> GetAllClassesWithoutSubjectClass()
+        {
+            return clasaDAL.GetAllClassesWithNoSubjectClass();
+        }
+
+        public ObservableCollection<Clasa> GetAllClassesWithoutMaterial()
+        {
+            return clasaDAL.GetAllClassesWithNoMaterial();
+        }
+
         public void AddClass(Clasa clasa)
         {
             if(String.IsNullOrEmpty(clasa.Cod_clasa))
