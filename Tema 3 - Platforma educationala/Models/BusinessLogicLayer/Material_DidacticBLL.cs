@@ -25,6 +25,11 @@ namespace Tema_3___Platforma_educationala.Models.BusinessLogicLayer
             }
         }
 
+        public ObservableCollection<Material_Didactic> GetAllMaterials()
+        {
+            return materialDAL.GetAllMaterials();
+        }
+
         public void GetAllMaterialsForSubject(Materie materie)
         {
             MaterialsList.Clear();

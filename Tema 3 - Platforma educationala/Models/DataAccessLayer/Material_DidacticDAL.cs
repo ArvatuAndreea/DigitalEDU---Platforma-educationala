@@ -73,6 +73,34 @@ namespace Tema_3___Platforma_educationala.Models
             }
         }
 
+        public ObservableCollection<Material_Didactic> GetAllMaterials()
+        {
+            SqlConnection con = DALHelper.Connection;
+            try
+            {
+                SqlCommand cmd = new SqlCommand("GetAllMaterials", con);
+                ObservableCollection<Material_Didactic> result = new ObservableCollection<Material_Didactic>();
+                cmd.CommandType = CommandType.StoredProcedure;
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Material_Didactic md = new Material_Didactic();
+                    md.Id_material = (int)(reader[0]);
+                    md.Id_materie = (int)(reader[1]);
+                    md.Cod_clasa = reader.GetString(2);
+                    md.Titlu = reader.GetString(3);
+                    result.Add(md);
+                }
+                reader.Close();
+                return result;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
         public void AddMaterial(Material_Didactic material)
         {
             using (SqlConnection con = DALHelper.Connection)
