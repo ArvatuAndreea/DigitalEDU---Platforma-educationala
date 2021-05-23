@@ -39,6 +39,70 @@ namespace Tema_3___Platforma_educationala.Models
             }
         }
 
+        public ObservableCollection<Materie> GetAllSubjectsWithNoMaterial()
+        {
+            using (SqlConnection con = DALHelper.Connection)
+            {
+                SqlCommand cmd = new SqlCommand("GetAllSubjectsWithNoMaterial", con);
+                ObservableCollection<Materie> result = new ObservableCollection<Materie>();
+                cmd.CommandType = CommandType.StoredProcedure;
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Materie m = new Materie();
+                    m.Id_materie = reader["Id_materie"] as int?;
+                    m.Denumire = reader["Denumire"].ToString();
+                    result.Add(m);
+                }
+                reader.Close();
+                return result;
+            }
+        }
+
+        public ObservableCollection<Materie> GetAllSubjectsWithNoSubjectClass()
+        {
+            using (SqlConnection con = DALHelper.Connection)
+            {
+                SqlCommand cmd = new SqlCommand("GetAllSubjectsWithNoSubjectClass", con);
+                ObservableCollection<Materie> result = new ObservableCollection<Materie>();
+                cmd.CommandType = CommandType.StoredProcedure;
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Materie m = new Materie();
+                    m.Id_materie = reader["Id_materie"] as int?;
+                    m.Denumire = reader["Denumire"].ToString();
+                    result.Add(m);
+                }
+                reader.Close();
+                return result;
+            }
+            
+        }
+
+        public ObservableCollection<Materie> GetAllSubjectsWithNoGrade()
+        {
+            using (SqlConnection con = DALHelper.Connection)
+            {
+                SqlCommand cmd = new SqlCommand("GetAllSubjectsWithNoGrade", con);
+                ObservableCollection<Materie> result = new ObservableCollection<Materie>();
+                cmd.CommandType = CommandType.StoredProcedure;
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Materie m = new Materie();
+                    m.Id_materie = reader["Id_materie"] as int?;
+                    m.Denumire = reader["Denumire"].ToString();
+                    result.Add(m);
+                }
+                reader.Close();
+                return result;
+            }
+        }
+
         public void AddSubject(Materie materie)
         {
             using (SqlConnection con = DALHelper.Connection)

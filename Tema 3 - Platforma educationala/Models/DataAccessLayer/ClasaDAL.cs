@@ -41,6 +41,72 @@ namespace Platforma_educationala___DigitalEDU.Models
             }
         }
 
+        public ObservableCollection<Clasa> GetAllClassesWithNoStudents()
+        {
+            using (SqlConnection con = DALHelper.Connection)
+            {
+                ObservableCollection<Clasa> result = new ObservableCollection<Clasa>();
+                SqlCommand cmd = new SqlCommand("GetAllClassesWithNoStudents", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Clasa c = new Clasa();
+                    c.Cod_clasa = reader["Cod_clasa"].ToString();
+                    c.Sala = reader["Sala"].ToString();
+                    c.Id_prof = reader["Id_prof"] as int?;
+                    result.Add(c);
+                }
+                reader.Close();
+                return result;
+            }
+        }
+
+        public ObservableCollection<Clasa> GetAllClassesWithNoMaterial()
+        {
+            using (SqlConnection con = DALHelper.Connection)
+            {
+                ObservableCollection<Clasa> result = new ObservableCollection<Clasa>();
+                SqlCommand cmd = new SqlCommand("GetAllClassesWithNoMaterial", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Clasa c = new Clasa();
+                    c.Cod_clasa = reader["Cod_clasa"].ToString();
+                    c.Sala = reader["Sala"].ToString();
+                    c.Id_prof = reader["Id_prof"] as int?;
+                    result.Add(c);
+                }
+                reader.Close();
+                return result;
+            }
+        }
+
+        public ObservableCollection<Clasa> GetAllClassesWithNoSubjectClass()
+        {
+            using (SqlConnection con = DALHelper.Connection)
+            {
+                ObservableCollection<Clasa> result = new ObservableCollection<Clasa>();
+                SqlCommand cmd = new SqlCommand("GetAllClassesWithNoSubjectCLass", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Clasa c = new Clasa();
+                    c.Cod_clasa = reader["Cod_clasa"].ToString();
+                    c.Sala = reader["Sala"].ToString();
+                    c.Id_prof = reader["Id_prof"] as int?;
+                    result.Add(c);
+                }
+                reader.Close();
+                return result;
+            }
+        }
+
         public void AddClass(Clasa clasa)
         {
             using (SqlConnection con = DALHelper.Connection)

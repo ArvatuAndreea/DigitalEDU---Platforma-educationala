@@ -13,14 +13,16 @@ namespace Platforma_educationala___DigitalEDU.Models
 {
     class ProfesorDAL
     {
-        public ObservableCollection<Profesor> GetAllProfessors()
+        public ObservableCollection<Profesor> GetAllProfessorsForUsers(Utilizator user)
         {
             SqlConnection con = DALHelper.Connection;
             try
             {
-                SqlCommand cmd = new SqlCommand("GetAllProfessors", con);
+                SqlCommand cmd = new SqlCommand("GetAllProfessorsForUsers", con);
                 ObservableCollection<Profesor> result = new ObservableCollection<Profesor>();
                 cmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter paramIdUser = new SqlParameter("@id_user", user.Id_utilizator);
+                cmd.Parameters.Add(paramIdUser);
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -39,6 +41,30 @@ namespace Platforma_educationala___DigitalEDU.Models
             finally
             {
                 con.Close();
+            }
+        }
+
+        public ObservableCollection<Profesor> GetAllProfessorsWithNoSubjectClass()
+        {
+            using (SqlConnection con = DALHelper.Connection)
+            {
+                SqlCommand cmd = new SqlCommand("GetAllProfessorsWithNoSubjectClass", con);
+                ObservableCollection<Profesor> result = new ObservableCollection<Profesor>();
+                cmd.CommandType = CommandType.StoredProcedure;
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Profesor p = new Profesor();
+                    p.Id_prof = reader["Id_prof"] as int?;
+                    p.Nume = reader["Nume"].ToString();
+                    p.Telefon = reader["Telefon"].ToString();
+                    p.Email = reader["Email"].ToString();
+                    p.Id_utilizator = reader["Id_utilizator"] as int?;
+                    result.Add(p);
+                }
+                reader.Close();
+                return result;
             }
         }
 

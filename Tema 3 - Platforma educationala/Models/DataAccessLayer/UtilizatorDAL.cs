@@ -27,8 +27,8 @@ namespace Platforma_educationala___DigitalEDU.Models
                 while (reader.Read())
                 {
                     Utilizator u = new Utilizator();
-                    u.Id_utilizator = (int)(reader[0]);  //reader.GetInt(0);
-                    u.Tip_utilizator = reader.GetString(1);   //reader[1].ToString();
+                    u.Id_utilizator = (int)(reader[0]); 
+                    u.Tip_utilizator = reader.GetString(1); 
                     result.Add(u);
                 }
                 reader.Close();
@@ -38,6 +38,72 @@ namespace Platforma_educationala___DigitalEDU.Models
             {
                 con.Close();
             }
+        }
+
+        public ObservableCollection<Utilizator> GetAllUsersWithNoAdmins()
+        {
+            using (SqlConnection con = DALHelper.Connection)  
+            {
+                SqlCommand cmd = new SqlCommand("GetAllUsersWithNoAdmins", con);
+                ObservableCollection<Utilizator> result = new ObservableCollection<Utilizator>();
+                cmd.CommandType = CommandType.StoredProcedure;
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Utilizator u = new Utilizator();
+                    u.Id_utilizator = reader["Id_utilizator"] as int?;
+                    u.Tip_utilizator = reader["Tip_Utilizator"].ToString();
+                    result.Add(u);
+                }
+                reader.Close();
+                return result;
+            }
+                
+        }
+
+        public ObservableCollection<Utilizator> GetAllUsersWithNoProfessors()
+        {
+            using (SqlConnection con = DALHelper.Connection)
+            {
+                SqlCommand cmd = new SqlCommand("GetAllUsersWithNoProfessors", con);
+                ObservableCollection<Utilizator> result = new ObservableCollection<Utilizator>();
+                cmd.CommandType = CommandType.StoredProcedure;
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Utilizator u = new Utilizator();
+                    u.Id_utilizator = reader["Id_utilizator"] as int?;
+                    u.Tip_utilizator = reader["Tip_Utilizator"].ToString();
+                    result.Add(u);
+                }
+                reader.Close();
+                return result;
+            }
+
+        }
+
+        public ObservableCollection<Utilizator> GetAllUsersWithNoStudents()
+        {
+            using (SqlConnection con = DALHelper.Connection)
+            {
+                SqlCommand cmd = new SqlCommand("GetAllUsersWithNoStudents", con);
+                ObservableCollection<Utilizator> result = new ObservableCollection<Utilizator>();
+                cmd.CommandType = CommandType.StoredProcedure;
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Utilizator u = new Utilizator();
+                    u.Id_utilizator = reader["Id_utilizator"] as int?;
+                    u.Tip_utilizator = reader["Tip_Utilizator"].ToString();
+                    result.Add(u);
+                }
+                reader.Close();
+                return result;
+            }
+
         }
 
         public void AddUser(Utilizator utilizator)

@@ -13,14 +13,46 @@ namespace Tema_3___Platforma_educationala.Models
 {
     class Material_DidacticDAL
     {
-        public ObservableCollection<Material_Didactic> GetAllMaterials()
+        public ObservableCollection<Material_Didactic> GetAllMaterialsForSubject(Materie materie)
         {
             SqlConnection con = DALHelper.Connection;
             try
             {
-                SqlCommand cmd = new SqlCommand("GetAllMaterials", con);
+                SqlCommand cmd = new SqlCommand("GetAllMaterialsForSubject", con);
                 ObservableCollection<Material_Didactic> result = new ObservableCollection<Material_Didactic>();
                 cmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter paramIdMaterie = new SqlParameter("@id_materie", materie.Id_materie);
+                cmd.Parameters.Add(paramIdMaterie);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Material_Didactic md = new Material_Didactic();
+                    md.Id_material = (int)(reader[0]);
+                    md.Id_materie = (int)(reader[1]);
+                    md.Cod_clasa = reader.GetString(2);
+                    md.Titlu = reader.GetString(3);
+                    result.Add(md);
+                }
+                reader.Close();
+                return result;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public ObservableCollection<Material_Didactic> GetAllMaterialsForClass(Clasa clasa)
+        {
+            SqlConnection con = DALHelper.Connection;
+            try
+            {
+                SqlCommand cmd = new SqlCommand("GetAllMaterialsForClass", con);
+                ObservableCollection<Material_Didactic> result = new ObservableCollection<Material_Didactic>();
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter paramCodClasa = new SqlParameter("@cod_clasa", clasa.Cod_clasa);
+                cmd.Parameters.Add(paramCodClasa);
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())

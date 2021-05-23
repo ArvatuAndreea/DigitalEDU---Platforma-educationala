@@ -13,14 +13,16 @@ namespace Platforma_educationala___DigitalEDU.Models
 {
     class AdministratorDAL
     {
-        public ObservableCollection<Administrator> GetAllAdmins()
+        public ObservableCollection<Administrator> GetAllAdminsForUsers(Utilizator user)
         {
             SqlConnection con = DALHelper.Connection;
             try
             {
-                SqlCommand cmd = new SqlCommand("GetAllAdmins", con);
+                SqlCommand cmd = new SqlCommand("GetAllAdminsForUsers", con);
                 ObservableCollection<Administrator> result = new ObservableCollection<Administrator>();
                 cmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter paramIdUtilizator = new SqlParameter("@id_utilizator", user.Id_utilizator);
+                cmd.Parameters.Add(paramIdUtilizator);
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 while(reader.Read())

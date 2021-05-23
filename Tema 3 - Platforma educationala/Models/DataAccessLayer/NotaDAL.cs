@@ -13,14 +13,16 @@ namespace Tema_3___Platforma_educationala.Models
 {
     class NotaDAL
     {
-        public ObservableCollection<Nota> GetAllGrades()
+        public ObservableCollection<Nota> GetAllGradesForStudent(Elev elev)
         {
             SqlConnection con = DALHelper.Connection;
             try
             {
-                SqlCommand cmd = new SqlCommand("GetAllGrades", con);
+                SqlCommand cmd = new SqlCommand("GetAllGradesStudent", con);
                 ObservableCollection<Nota> result = new ObservableCollection<Nota>();
                 cmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter paramIdElev = new SqlParameter("@id_elev", elev.Id_elev);
+                cmd.Parameters.Add(paramIdElev);
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -44,7 +46,40 @@ namespace Tema_3___Platforma_educationala.Models
             }
         }
 
-        
+        public ObservableCollection<Nota> GetAllGradesForSubject(Materie materie)
+        {
+            SqlConnection con = DALHelper.Connection;
+            try
+            {
+                SqlCommand cmd = new SqlCommand("GetAllGradesSubject", con);
+                ObservableCollection<Nota> result = new ObservableCollection<Nota>();
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter paramIdMaterie = new SqlParameter("@id_materie", materie.Id_materie);
+                cmd.Parameters.Add(paramIdMaterie);
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Nota n = new Nota();
+                    n.Id_nota = (int)(reader[0]);
+                    n.Id_elev = (int)(reader[1]);
+                    n.Id_materie = (int)(reader[2]);
+                    n.Punctaj = (int)(reader[3]);
+                    n.Data = reader.GetString(4);
+                    n.Semestru = (int)(reader[5]);
+                    n.E_teza = reader.GetString(6);
+                    result.Add(n);
+                }
+                reader.Close();
+                return result;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+
 
         public void AddGrade(Nota nota)
         {
