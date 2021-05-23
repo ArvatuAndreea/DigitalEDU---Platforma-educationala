@@ -1,0 +1,21 @@
+C:\Users\pc\Desktop\Tema 3 - Platforma educationala\obj\Debug\Tema 3 - Platforma educationala.csprojAssemblyReference.cache
+C:\Users\pc\Desktop\Tema 3 - Platforma educationala\obj\Debug\MainWindow.g.cs
+C:\Users\pc\Desktop\Tema 3 - Platforma educationala\obj\Debug\Views\AdminWindow.g.cs
+C:\Users\pc\Desktop\Tema 3 - Platforma educationala\obj\Debug\Views\ElevWindow.g.cs
+C:\Users\pc\Desktop\Tema 3 - Platforma educationala\obj\Debug\Views\ProfesorWindow.g.cs
+C:\Users\pc\Desktop\Tema 3 - Platforma educationala\obj\Debug\App.g.cs
+C:\Users\pc\Desktop\Tema 3 - Platforma educationala\obj\Debug\Tema 3 - Platforma educationala_MarkupCompile.cache
+C:\Users\pc\Desktop\Tema 3 - Platforma educationala\obj\Debug\Tema 3 - Platforma educationala_MarkupCompile.lref
+C:\Users\pc\Desktop\Tema 3 - Platforma educationala\bin\Debug\Tema 3 - Platforma educationala.exe.config
+C:\Users\pc\Desktop\Tema 3 - Platforma educationala\bin\Debug\Tema 3 - Platforma educationala.exe
+C:\Users\pc\Desktop\Tema 3 - Platforma educationala\bin\Debug\Tema 3 - Platforma educationala.pdb
+C:\Users\pc\Desktop\Tema 3 - Platforma educationala\obj\Debug\MainWindow.baml
+C:\Users\pc\Desktop\Tema 3 - Platforma educationala\obj\Debug\Views\AdminWindow.baml
+C:\Users\pc\Desktop\Tema 3 - Platforma educationala\obj\Debug\Views\ElevWindow.baml
+C:\Users\pc\Desktop\Tema 3 - Platforma educationala\obj\Debug\Views\ProfesorWindow.baml
+C:\Users\pc\Desktop\Tema 3 - Platforma educationala\obj\Debug\Tema 3 - Platforma educationala.g.resources
+C:\Users\pc\Desktop\Tema 3 - Platforma educationala\obj\Debug\Tema_3___Platforma_educationala.Properties.Resources.resources
+C:\Users\pc\Desktop\Tema 3 - Platforma educationala\obj\Debug\Tema 3 - Platforma educationala.csproj.GenerateResource.cache
+C:\Users\pc\Desktop\Tema 3 - Platforma educationala\obj\Debug\Tema 3 - Platforma educationala.csproj.CoreCompileInputs.cache
+C:\Users\pc\Desktop\Tema 3 - Platforma educationala\obj\Debug\Tema 3 - Platforma educationala.exe
+C:\Users\pc\Desktop\Tema 3 - Platforma educationala\obj\Debug\Tema 3 - Platforma educationala.pdb
