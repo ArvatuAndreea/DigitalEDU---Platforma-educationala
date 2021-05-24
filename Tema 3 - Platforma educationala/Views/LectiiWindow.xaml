@@ -1,0 +1,15 @@
+﻿<Window x:Class="Tema_3___Platforma_educationala.Views.LectiiWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tema_3___Platforma_educationala.Views"
+        mc:Ignorable="d"
+        Title="LectiiWindow" Height="450" Width="800">
+    <StackPanel>
+        <Label Name="Username" Content="Lectiile mele" FontSize="30" Height="70" FontWeight="Bold" FontStyle="Oblique"/>
+        <Label Content="Introduceti materia dorita:"/>
+        <TextBox Name="Lectie" Height="34" Margin="0,0,466,0"/>
+        <Button Name="Lectie_btn" Content="Show" Height="27" Margin="210,0,466,0" Click="Lectie_btn_Click"/>
+    </StackPanel>
+</Window>

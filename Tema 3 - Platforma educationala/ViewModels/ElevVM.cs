@@ -18,11 +18,12 @@ namespace Tema_3___Platforma_educationala.ViewModels
         ElevBLL elevBLL = new ElevBLL();
         ClasaBLL clasaBLL = new ClasaBLL();
         UtilizatorBLL userBLL = new UtilizatorBLL();
-
+        
         public ElevVM()
         {
             ClassesList = clasaBLL.GetAllClasses();
             UsersList = userBLL.GetAllUsers();
+            StudentsList = elevBLL.GetAllStudents();
         }
 
         #region Data Members

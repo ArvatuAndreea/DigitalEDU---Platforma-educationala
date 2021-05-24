@@ -23,5 +23,29 @@ namespace Tema_3___Platforma_educationala.Views
         {
             InitializeComponent();
         }
+
+        private void Button_Lectii(object sender, RoutedEventArgs e)
+        {
+            LectiiWindow lw = new LectiiWindow();
+            lw.Show();
+        }
+
+        private void Button_Absente(object sender, RoutedEventArgs e)
+        {
+            AbsenteWindow aw = new AbsenteWindow();
+            aw.Show();
+        }
+
+        private void Button_Note(object sender, RoutedEventArgs e)
+        {
+            NoteWindow nw = new NoteWindow();
+            nw.Show();
+        }
+
+        private void Button_Medii(object sender, RoutedEventArgs e)
+        {
+            MediiWindow mw = new MediiWindow();
+            mw.Show();
+        }
     }
 }

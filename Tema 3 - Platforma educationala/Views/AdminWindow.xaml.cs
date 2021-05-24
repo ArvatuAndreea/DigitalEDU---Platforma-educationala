@@ -23,5 +23,41 @@ namespace Tema_3___Platforma_educationala.Views
         {
             InitializeComponent();
         }
+
+        private void AdminElevi_Click(object sender, RoutedEventArgs e)
+        {
+            AdminElevWindow w = new AdminElevWindow();
+            w.Show();
+        }
+
+        private void AdminProfesori_Click(object sender, RoutedEventArgs e)
+        {
+            AdminProfWindow w = new AdminProfWindow();
+            w.Show();
+        }
+
+        private void AdminMaterii_Click(object sender, RoutedEventArgs e)
+        {
+            AdminSubjectWindow w = new AdminSubjectWindow();
+            w.Show();
+        }
+
+        private void ListaElevi_Click(object sender, RoutedEventArgs e)
+        {
+            ListaEleviWindow window = new ListaEleviWindow();
+            window.Show();
+        }
+
+        private void ListaProfesori_Click(object sender, RoutedEventArgs e)
+        {
+            ListaProfesoriWindow window = new ListaProfesoriWindow();
+            window.Show();
+        }
+
+        private void ListaAdministratori_Click(object sender, RoutedEventArgs e)
+        {
+            ListaAdministratoriWindow window = new ListaAdministratoriWindow();
+            window.Show();
+        }
     }
 }

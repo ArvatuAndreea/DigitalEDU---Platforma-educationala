@@ -24,7 +24,11 @@ namespace Tema_3___Platforma_educationala.Models.BusinessLogicLayer
                 AdministratorsList.Add(a);
             }
         }
-
+        public ObservableCollection<Administrator>  GetAllAdministrators()
+        {
+            return administratorDAL.GetAllAdministrators();
+        }
+        
         public void AddAdministrator(Administrator administrator)
         {
             if(String.IsNullOrEmpty(administrator.Nume))

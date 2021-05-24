@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\App.xaml
-417525807
+14-614640940
 
-2823069718
-141066371409
-MainWindow.xaml;Views\AdminWindow.xaml;Views\ElevWindow.xaml;Views\ProfesorWindow.xaml;
+61-2029270718
+15-1264919231
+MainWindow.xaml;Views\AbsenteWindow.xaml;Views\AdminElevWindow.xaml;Views\AdminProfWindow.xaml;Views\AdminSubjectWindow.xaml;Views\AdminWindow.xaml;Views\ElevWindow.xaml;Views\LectiiWindow.xaml;Views\ListaAdministratoriWindow.xaml;Views\ListaEleviWindow.xaml;Views\ListaProfesoriWindow.xaml;Views\MediiWindow.xaml;Views\NoteWindow.xaml;Views\ProfesorWindow.xaml;
 
 False
 

@@ -13,6 +13,36 @@ namespace Platforma_educationala___DigitalEDU.Models
 {
     class AdministratorDAL
     {
+
+        public ObservableCollection<Administrator> GetAllAdministrators()
+        {
+            SqlConnection con = DALHelper.Connection;
+            try
+            {
+                SqlCommand cmd = new SqlCommand("GetAllAdministrators", con);
+                ObservableCollection<Administrator> result = new ObservableCollection<Administrator>();
+                cmd.CommandType = CommandType.StoredProcedure;
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Administrator a = new Administrator();
+                    a.Id_administrator = (int)(reader[0]);
+                    a.Nume = reader.GetString(1);
+                    a.Telefon = reader.GetString(2);
+                    a.Email = reader.GetString(3);
+                    a.Id_utilizator = (int)(reader[4]);
+                    result.Add(a);
+                }
+                reader.Close();
+                return result;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
         public ObservableCollection<Administrator> GetAllAdminsForUsers(Utilizator user)
         {
             SqlConnection con = DALHelper.Connection;

@@ -20,6 +20,7 @@ namespace Tema_3___Platforma_educationala.ViewModels
         public AdministratorVM()
         {
             UsersList = userBLL.GetAllUsers();
+            AdministratorsList = adminBLL.GetAllAdministrators();
         }
 
         #region

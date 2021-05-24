@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Tema_3___Platforma_educationala.Views"
         mc:Ignorable="d"
         Title="ProfesorWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <Window.Background>
+        <ImageBrush ImageSource="/Tema 3 - Platforma educationala;component/Images/Prof background.jpg"/>
+    </Window.Background>
 </Window>

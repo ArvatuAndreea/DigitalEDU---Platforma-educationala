@@ -21,6 +21,7 @@ namespace Tema_3___Platforma_educationala.ViewModels
         public ProfesorVM()
         {
             UsersList = userBLL.GetAllUsers();
+            ProfessorsList = profBLL.GetAllProfessors();
         }
 
         #region Data Members

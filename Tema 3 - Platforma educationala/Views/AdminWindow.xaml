@@ -3,10 +3,35 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Tema_3___Platforma_educationala.Views"
+        xmlns:ctx="clr-namespace:Tema_3___Platforma_educationala.ViewModels"
         mc:Ignorable="d"
         Title="AdminWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <Window.Background>
+        <ImageBrush ImageSource="/Tema 3 - Platforma educationala;component/Images/admin background.jpg"/>
+    </Window.Background>
+
+    <StackPanel Margin="0,0,2,6">
+        <Menu>
+            <Menu.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="Lavender"  Offset="0.528"/>
+                    <GradientStop Color="#FF6A85D8" Offset="0.01"/>
+                    <GradientStop Color="#FF3464C4" Offset="1"/>
+                    <GradientStop Color="#FF202E7E" Offset="1"/>
+                </LinearGradientBrush>
+            </Menu.Background>
+            <MenuItem Header="Rapoarte" Width="174" FontSize="20" FontStyle="Oblique" FontWeight="Bold">
+            <MenuItem.Icon>
+                <Image Source="/Tema 3 - Platforma educationala;component/Images/raport.png"/>
+            </MenuItem.Icon>
+                <MenuItem Header="Lista elevilor" Click="ListaElevi_Click" />
+                <MenuItem Header="Lista profesorilor" Click="ListaProfesori_Click" />
+                <MenuItem Header="Lista administratorilor" Click="ListaAdministratori_Click" />
+            </MenuItem>
+        </Menu>
+        <Button Content=" Administrare elevi" Height="46" Margin="0,0,654,0" Click="AdminElevi_Click"/>
+        <Button Content=" Administrare profesori" Height="42" Margin="0,0,654,0" Click="AdminProfesori_Click"/>
+        <Button Content=" Administrare materii" Height="44" Margin="0,0,654,0" Click="AdminMaterii_Click"/>
+    </StackPanel>
+
 </Window>

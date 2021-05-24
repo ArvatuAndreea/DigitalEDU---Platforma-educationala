@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AttachedCommandBehavior, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\AttachedCommandBehavior.2.0.0.0\lib\net35\AttachedCommandBehavior.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
@@ -56,6 +59,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Converters\ElevConvert.cs" />
+    <Compile Include="Converters\MaterieConverter.cs" />
+    <Compile Include="Converters\ProfConvert.cs" />
     <Compile Include="Exceptions\EDUException.cs" />
     <Compile Include="Models\BusinessLogicLayer\AdministratorBLL.cs" />
     <Compile Include="Models\BusinessLogicLayer\ClasaBLL.cs" />
@@ -96,11 +102,41 @@
     <Compile Include="ViewModels\NotaVM.cs" />
     <Compile Include="ViewModels\ProfesorVM.cs" />
     <Compile Include="ViewModels\UtilizatorVM.cs" />
+    <Compile Include="Views\AbsenteWindow.xaml.cs">
+      <DependentUpon>AbsenteWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminElevWindow.xaml.cs">
+      <DependentUpon>AdminElevWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminProfWindow.xaml.cs">
+      <DependentUpon>AdminProfWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminSubjectWindow.xaml.cs">
+      <DependentUpon>AdminSubjectWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\AdminWindow.xaml.cs">
       <DependentUpon>AdminWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ElevWindow.xaml.cs">
       <DependentUpon>ElevWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LectiiWindow.xaml.cs">
+      <DependentUpon>LectiiWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListaAdministratoriWindow.xaml.cs">
+      <DependentUpon>ListaAdministratoriWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListaEleviWindow.xaml.cs">
+      <DependentUpon>ListaEleviWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListaProfesoriWindow.xaml.cs">
+      <DependentUpon>ListaProfesoriWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MediiWindow.xaml.cs">
+      <DependentUpon>MediiWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NoteWindow.xaml.cs">
+      <DependentUpon>NoteWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ProfesorWindow.xaml.cs">
       <DependentUpon>ProfesorWindow.xaml</DependentUpon>
@@ -117,11 +153,51 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\AbsenteWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminElevWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminProfWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminSubjectWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\AdminWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ElevWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LectiiWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ListaAdministratoriWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ListaEleviWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ListaProfesoriWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MediiWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NoteWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -148,6 +224,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -158,6 +235,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\educatie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\elev Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Prof background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\admin background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\raport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\carte.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -19,24 +19,47 @@ C:\Users\pc\Desktop\Tema 3 - Platforma educationala\obj\Debug\Tema 3 - Platforma
 C:\Users\pc\Desktop\Tema 3 - Platforma educationala\obj\Debug\Tema 3 - Platforma educationala.csproj.CoreCompileInputs.cache
 C:\Users\pc\Desktop\Tema 3 - Platforma educationala\obj\Debug\Tema 3 - Platforma educationala.exe
 C:\Users\pc\Desktop\Tema 3 - Platforma educationala\obj\Debug\Tema 3 - Platforma educationala.pdb
+C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Tema 3 - Platforma educationala.csprojAssemblyReference.cache
+C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\MainWindow.g.cs
+C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Views\AbsenteWindow.g.cs
+C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Views\AdminElevWindow.g.cs
+C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Views\AdminProfWindow.g.cs
+C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Views\AdminSubjectWindow.g.cs
+C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Views\AdminWindow.g.cs
+C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Views\ElevWindow.g.cs
+C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Views\LectiiWindow.g.cs
+C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Views\MediiWindow.g.cs
+C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Views\NoteWindow.g.cs
+C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Views\ProfesorWindow.g.cs
+C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\App.g.cs
+C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Tema 3 - Platforma educationala_MarkupCompile.cache
+C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Tema 3 - Platforma educationala_MarkupCompile.lref
 C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\bin\Debug\Tema 3 - Platforma educationala.exe.config
 C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\bin\Debug\Tema 3 - Platforma educationala.exe
 C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\bin\Debug\Tema 3 - Platforma educationala.pdb
-C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Tema 3 - Platforma educationala.csprojAssemblyReference.cache
-C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\MainWindow.g.cs
-C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Views\AdminWindow.g.cs
-C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Views\ElevWindow.g.cs
-C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Views\ProfesorWindow.g.cs
-C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\App.g.cs
-C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Tema 3 - Platforma educationala_MarkupCompile.cache
-C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Tema 3 - Platforma educationala_MarkupCompile.lref
+C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\bin\Debug\AttachedCommandBehavior.dll
 C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\MainWindow.baml
+C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Views\AbsenteWindow.baml
+C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Views\AdminElevWindow.baml
+C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Views\AdminProfWindow.baml
+C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Views\AdminSubjectWindow.baml
 C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Views\AdminWindow.baml
 C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Views\ElevWindow.baml
+C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Views\LectiiWindow.baml
+C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Views\MediiWindow.baml
+C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Views\NoteWindow.baml
 C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Views\ProfesorWindow.baml
 C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Tema 3 - Platforma educationala.g.resources
 C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Tema_3___Platforma_educationala.Properties.Resources.resources
 C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Tema 3 - Platforma educationala.csproj.GenerateResource.cache
 C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Tema 3 - Platforma educationala.csproj.CoreCompileInputs.cache
+C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Tema 3 - Platforma educationala.csproj.CopyComplete
 C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Tema 3 - Platforma educationala.exe
 C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Tema 3 - Platforma educationala.pdb
+C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Views\ListaAdministratoriWindow.g.cs
+C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Views\ListaEleviWindow.g.cs
+C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Views\ListaProfesoriWindow.g.cs
+C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Views\ListaAdministratoriWindow.baml
+C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Views\ListaEleviWindow.baml
+C:\Users\pc\Desktop\DigitalEDU---Platforma-educationala\Tema 3 - Platforma educationala\obj\Debug\Views\ListaProfesoriWindow.baml

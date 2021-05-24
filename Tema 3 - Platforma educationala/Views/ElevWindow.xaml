@@ -6,7 +6,14 @@
         xmlns:local="clr-namespace:Tema_3___Platforma_educationala.Views"
         mc:Ignorable="d"
         Title="ElevWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <Window.Background>
+        <ImageBrush ImageSource="/Tema 3 - Platforma educationala;component/Images/elev Background.jpg"/>
+    </Window.Background>
+
+    <StackPanel>
+        <Button Content="Lectii" Height="33" Margin="0,0,646,0" Click="Button_Lectii"/>
+        <Button Content="Absente" Height="33" Margin="0,0,646,0" Click="Button_Absente"/>
+        <Button Content="Note" Height="33" Margin="0,0,646,0" Click="Button_Note"/>
+        <Button Content="Medii" Height="33" Margin="0,0,646,0" Click="Button_Medii"/>
+    </StackPanel>
 </Window>
